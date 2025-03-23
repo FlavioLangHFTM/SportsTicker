@@ -24,6 +24,13 @@ At first this project was meant to be using Kafka aswell for managing real time 
 - PostgreSQL or H2 (relational database)
 - Maven (build tool)
 
+## Starting the Project
+This Project currently works with the Quarkus Dev Services. These make running it very easy:
+
+`cd sports-ticker-main && ./mvnw quarkus:dev`
+
+This spins up all the necessary docker containers for running the Backend including a Database and a Kafka Broker.
+
 ## Example GraphQL Queries
 
 These Examples can easily be tested using the GraphQL features of the Postman client.
@@ -76,3 +83,22 @@ mutation {
 ```
 
 ### Subscribe to Match event for certain Mathc (Requires WebSocket Access)
+
+```graphql
+subscription EventAdded {
+    eventAdded(matchId: 1) {
+        id
+        timestamp
+        type
+        player{
+            id
+            name
+        }
+        match{
+            scoreA
+            scoreB
+        }
+    }
+}
+
+```
