@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 63736,
+            "driver": "MySQL",
+            "name": "Quarkus Dev",
+            "database": "quarkus",
+            "username": "quarkus"
+        }
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
+}
